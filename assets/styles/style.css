@@ -14,7 +14,7 @@ body h1 {
   background-color: gray;
   position: relative;
   left: 30.5rem;
-  height: 44vh;
+  height: 25vh;
   width: 30vw;
   margin: 1rem 0 0 1rem;
   padding: 1rem;
@@ -47,7 +47,7 @@ body h1 {
 }
 
 .calculated-field {
-  font-size: 25px;
+  font-size: 24px;
   margin: 0.5rem 0 0 1rem;
   padding: 0.5rem;
   width: 22.5rem;
@@ -55,4 +55,65 @@ body h1 {
 
 .calculated-field:focus {
   outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+
+  body h1 {
+    margin: 1rem 0 0 1rem;
+    text-align: center;
+  }
+
+  .form-container {
+    background-color: gray;
+    position: absolute;
+    left: 0;
+    height: 20vh;
+    width: 90vw;
+    margin: 1rem 0 0 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .form-container select {
+    margin: 1rem;
+    padding: 0.25rem;
+  }
+
+  .number-div label {
+    margin: 1rem;
+    font-size: 20px;
+    color: white;
+  }
+
+  .number-div input {
+    font-size: 20px;
+    padding: 0.5rem;
+    border: none;
+  }
+
+  .number-div input:focus {
+    outline: none;
+  }
+
+  .controls-div button {
+    padding: 0.25rem;
+  }
+
+  .calculated-field {
+    font-size: 20px;
+    margin: 0.5rem 0 0 1rem;
+    padding: 0.5rem;
+    width: 20rem;
+  }
+
+  .calculated-field:focus {
+    outline: none;
+  }
 }
