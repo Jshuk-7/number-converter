@@ -103,8 +103,13 @@ body h1 {
     outline: none;
   }
 
+  .controls-div {
+    display: flex;
+    flex-direction: row;
+  }
+
   .controls-div button {
-    padding: 0.25rem;
+    padding: 0.1rem;
   }
 
   .calculated-field {
