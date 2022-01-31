@@ -37,7 +37,6 @@
   body.append(header, formContainer);
 
   function convertNumberHandler() {
-    console.log(dropdown.value);
     if (dropdown.value === 'binary') {
       convertToBinary(numberInput.value);
     }
@@ -103,6 +102,11 @@
     calculatedValue__ReadOnly.value = '';
   }
 
-  convertButton.addEventListener('click', convertNumberHandler);
-  clearFieldsButton.addEventListener('click', clearFieldsHandler);
+  if (window.innerWidth <= 500) {
+    convertButton.addEventListener('touchstart', convertNumberHandler);
+    clearFieldsButton.addEventListener('touchstart', clearFieldsHandler);
+  } else if (window.innerWidth > 500) {
+    convertButton.addEventListener('click', convertNumberHandler);
+    clearFieldsButton.addEventListener('click', clearFieldsHandler);
+  }
 }
