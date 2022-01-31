@@ -10,6 +10,7 @@
   const defaultSelection = document.createElement('option');
   const binary = document.createElement('option');
   const convertButton = document.createElement('button');
+  const clearFieldsButton = document.createElement('button');
   const calculatedValue__ReadOnly = document.createElement('input');
 
   body.style['background-color'] = 'black';
@@ -25,17 +26,19 @@
   binary.setAttribute('value', 'binary');
   binary.textContent = 'binary';
   convertButton.textContent = 'Convert';
+  clearFieldsButton.textContent = 'Clear';
   calculatedValue__ReadOnly.setAttribute('readonly', '');
   calculatedValue__ReadOnly.classList.add('calculated-field');
 
   numberDiv.append(numberInputLabel, numberInput);
-  controlsDiv.append(dropdown, convertButton);
+  controlsDiv.append(dropdown, convertButton, clearFieldsButton);
   dropdown.append(defaultSelection, binary);
   formContainer.append(numberDiv, controlsDiv, calculatedValue__ReadOnly);
   body.append(header, formContainer);
 
   function convertNumberHandler() {
-    if (dropdown.value == 'binary') {
+    console.log(dropdown.value);
+    if (dropdown.value === 'binary') {
       convertToBinary(numberInput.value);
     }
   }
@@ -65,7 +68,6 @@
       bit8,
       bitVal8,
       bitCalc8;
-
     const bit = 2;
 
     bit1 = num % bit;
@@ -96,5 +98,11 @@
     calculatedValue__ReadOnly.value = result;
   }
 
+  function clearFieldsHandler() {
+    numberInput.value = '';
+    calculatedValue__ReadOnly.value = '';
+  }
+
   convertButton.addEventListener('click', convertNumberHandler);
+  clearFieldsButton.addEventListener('click', clearFieldsHandler);
 }

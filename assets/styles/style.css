@@ -43,6 +43,7 @@ body h1 {
 }
 
 .controls-div button {
+  margin-right: 1rem;
   padding: 0.25rem;
 }
 
