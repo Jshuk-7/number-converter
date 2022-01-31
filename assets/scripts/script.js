@@ -1,17 +1,17 @@
 {
-  const body = document.body;
-  const header = document.createElement('h1');
-  const formContainer = document.createElement('div');
-  const numberDiv = document.createElement('div');
-  const numberInputLabel = document.createElement('label');
-  const numberInput = document.createElement('input');
-  const controlsDiv = document.createElement('div');
-  const dropdown = document.createElement('select');
-  const defaultSelection = document.createElement('option');
-  const binary = document.createElement('option');
-  const convertButton = document.createElement('button');
-  const clearFieldsButton = document.createElement('button');
-  const calculatedValue__ReadOnly = document.createElement('input');
+  var body = document.body;
+  var header = document.createElement('h1');
+  var formContainer = document.createElement('div');
+  var numberDiv = document.createElement('div');
+  var numberInputLabel = document.createElement('label');
+  var numberInput = document.createElement('input');
+  var controlsDiv = document.createElement('div');
+  var dropdown = document.createElement('select');
+  var defaultSelection = document.createElement('option');
+  var binary = document.createElement('option');
+  var convertButton = document.createElement('button');
+  var clearFieldsButton = document.createElement('button');
+  var calculatedValue__ReadOnly = document.createElement('input');
 
   body.style['background-color'] = 'black';
   header.style['color'] = 'white';
@@ -43,7 +43,7 @@
   }
 
   function convertToBinary(num) {
-    let bit1,
+    var bit1,
       bitVal1,
       bitCalc1,
       bit2,
@@ -67,7 +67,7 @@
       bit8,
       bitVal8,
       bitCalc8;
-    const bit = 2;
+    var bit = 2;
 
     bit1 = num % bit;
     bitCalc1 = parseInt((bitVal1 = num / bit));
@@ -93,7 +93,7 @@
     bit8 = bitCalc7 % bit;
     bitCalc8 = parseInt((bitVal8 = bitVal7 / bit));
 
-    let result = `${bit8}${bit7}${bit6}${bit5}${bit4}${bit3}${bit2}${bit1}`;
+    var result = `${bit8}${bit7}${bit6}${bit5}${bit4}${bit3}${bit2}${bit1}`;
     calculatedValue__ReadOnly.value = result;
   }
 
