@@ -19,6 +19,7 @@
   formContainer.classList.add('form-container');
   numberDiv.classList.add('number-div');
   numberInputLabel.textContent = 'Number:';
+  numberInput.type = 'number';
   controlsDiv.classList.add('controls-div');
   dropdown.setAttribute('name', 'numberStd');
   defaultSelection.setAttribute('value', null);
